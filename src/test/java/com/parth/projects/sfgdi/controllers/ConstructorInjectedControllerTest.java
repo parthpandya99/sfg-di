@@ -1,4 +1,4 @@
-package com.parth.projects.sfgdi.controller;
+package com.parth.projects.sfgdi.controllers;
 
 import com.parth.projects.sfgdi.services.GreetingServiceConstructorImpl;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,9 +1,6 @@
 package com.parth.projects.sfgdi;
 
-import com.parth.projects.sfgdi.controller.ConstructorInjectedController;
-import com.parth.projects.sfgdi.controller.MyController;
-import com.parth.projects.sfgdi.controller.PropertyInjectedController;
-import com.parth.projects.sfgdi.controller.SetterInjectedController;
+import com.parth.projects.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -32,6 +29,10 @@ public class SfgDiApplication {
 		ConstructorInjectedController constructorInjectedController =
 				(ConstructorInjectedController) applicationContext.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		System.out.println("I18N ------");
+		I18nController i18nController = (I18nController) applicationContext.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 	}
 
 }
