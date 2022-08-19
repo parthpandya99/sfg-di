@@ -1,5 +1,6 @@
 package com.parth.projects.sfgdi.controller;
 
+import com.parth.projects.sfgdi.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -14,8 +15,18 @@ import org.springframework.stereotype.Controller;
 // there by going forward injecting every other component which needs an instance of 'MyController' with this object
 public class MyController {
 
+    private final GreetingService greetingService;
+
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
     public String greet(){
         System.out.println("Greetings from the bat cave");
         return "Greetings from the bat cave";
+    }
+
+    public String getGreeting(){
+        return greetingService.sayGreeting();
     }
 }
