@@ -1,10 +1,8 @@
 package com.parth.projects.sfgdi.controller;
 
-import com.parth.projects.sfgdi.services.GreetingServiceImpl;
+import com.parth.projects.sfgdi.services.GreetingServiceConstructorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Parth Pandya
@@ -16,7 +14,7 @@ class ConstructorInjectedControllerTest {
     ConstructorInjectedController constructorInjectedController;
     @BeforeEach
     void setUp() {
-        constructorInjectedController = new ConstructorInjectedController(new GreetingServiceImpl());
+        constructorInjectedController = new ConstructorInjectedController(new GreetingServiceConstructorImpl());
     }
 
     @Test

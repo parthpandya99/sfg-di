@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
  * @project sfg-di
  **/
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class GreetingServicePropertyImpl implements GreetingService {
     /**
      * @return
      */
     @Override
     public String sayGreeting() {
-        return "Hello world";
+        return "Hello world - Property";
     }
 }

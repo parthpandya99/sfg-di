@@ -1,10 +1,8 @@
 package com.parth.projects.sfgdi.controller;
 
-import com.parth.projects.sfgdi.services.GreetingServiceImpl;
+import com.parth.projects.sfgdi.services.GreetingServiceConstructorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Parth Pandya
@@ -21,7 +19,7 @@ class PropertyInjectedControllerTest {
         // This is essentially DI without the help of the spring framework
         // This is property based DI
         propertyInjectedController = new PropertyInjectedController();
-        propertyInjectedController.greetingService  = new GreetingServiceImpl();
+        propertyInjectedController.greetingService  = new GreetingServiceConstructorImpl();
     }
 
     @Test

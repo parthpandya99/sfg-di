@@ -2,6 +2,7 @@ package com.parth.projects.sfgdi.controller;
 
 import com.parth.projects.sfgdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -15,7 +16,7 @@ public class ConstructorInjectedController {
     //@Autowired annotation is not required for constructor based DI
     private final GreetingService greetingService;
 
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("greetingServiceConstructorImpl") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

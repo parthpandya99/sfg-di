@@ -1,10 +1,8 @@
 package com.parth.projects.sfgdi.controller;
 
-import com.parth.projects.sfgdi.services.GreetingServiceImpl;
+import com.parth.projects.sfgdi.services.GreetingServiceConstructorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Parth Pandya
@@ -19,7 +17,7 @@ class SetterInjectedControllerTest {
     void setUp() {
         //This is setter based DI
         setterInjectedController = new SetterInjectedController();
-        setterInjectedController.setGreetingService(new GreetingServiceImpl());
+        setterInjectedController.setGreetingService(new GreetingServiceConstructorImpl());
     }
 
     @Test
